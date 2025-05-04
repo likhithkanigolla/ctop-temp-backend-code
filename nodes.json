@@ -1,0 +1,299 @@
+{
+    "vendor_id": "v001",
+    "vendor_name": "Acme Corp",
+    "domains": [
+      {
+        "domain_id": "d001",
+        "domain_name": "Air Quality",
+        "domain_short_name": "AirQ",
+        "parameters": [
+          {
+            "parameter_name": "PM2.5",
+            "data_type": "float",
+            "accuracy": "±1.0 μg/m³",
+            "units": "μg/m³",
+            "resolution": "0.1 μg/m³",
+            "description": "Measures fine particulate matter"
+          },
+          {
+            "parameter_name": "PM10",
+            "data_type": "float",
+            "accuracy": "±2.0 μg/m³",
+            "units": "μg/m³",
+            "resolution": "0.1 μg/m³",
+            "description": "Measures coarse particulate matter"
+          },
+          {
+            "parameter_name": "Temperature",
+            "data_type": "float",
+            "accuracy": "±0.5°C",
+            "units": "Celsius",
+            "resolution": "0.1°C",
+            "description": "Measures ambient temperature"
+          },
+          {
+            "parameter_name": "Relative Humidity",
+            "data_type": "float",
+            "accuracy": "±3%",
+            "units": "Percentage",
+            "resolution": "0.1%",
+            "description": "Measures air humidity"
+          },
+          {
+            "parameter_name": "CO Concentration",
+            "data_type": "float",
+            "accuracy": "±1 ppm",
+            "units": "ppm",
+            "resolution": "0.1 ppm",
+            "description": "Measures carbon monoxide concentration"
+          },
+          {
+            "parameter_name": "NO2 Concentration",
+            "data_type": "float",
+            "accuracy": "±0.02 ppm",
+            "units": "ppm",
+            "resolution": "0.01 ppm",
+            "description": "Measures nitrogen dioxide concentration"
+          },
+          {
+            "parameter_name": "NH3 Concentration",
+            "data_type": "float",
+            "accuracy": "±0.5 ppm",
+            "units": "ppm",
+            "resolution": "0.1 ppm",
+            "description": "Measures ammonia concentration"
+          },
+          {
+            "parameter_name": "AQI",
+            "data_type": "integer",
+            "accuracy": "±5",
+            "units": "Index",
+            "resolution": "1",
+            "description": "Air Quality Index value"
+          },
+          {
+            "parameter_name": "AQL",
+            "data_type": "string",
+            "accuracy": "N/A",
+            "units": "Category",
+            "resolution": "N/A",
+            "description": "Air Quality Level category"
+          },
+          {
+            "parameter_name": "AQI-MP",
+            "data_type": "string",
+            "accuracy": "N/A",
+            "units": "Parameter",
+            "resolution": "N/A",
+            "description": "Main pollutant affecting AQI"
+          },
+          {
+            "parameter_name": "Data Interval",
+            "data_type": "integer",
+            "accuracy": "±1s",
+            "units": "Seconds",
+            "resolution": "1s",
+            "description": "Measurement interval"
+          }
+        ],
+        "sensor_types": [
+          {
+            "sensor_type_id": "st001",
+            "sensor_type_name": "Comprehensive Air Quality Monitor",
+            "parameters": ["PM2.5", "PM10", "Temperature", "Relative Humidity", "CO Concentration", "NO2 Concentration", "AQI", "AQL"],
+            "data_types": ["float", "float", "float", "float", "float", "float", "integer", "string"],
+            "accuracy": ["±1.0 μg/m³", "±2.0 μg/m³", "±0.5°C", "±3%", "±1 ppm", "±0.02 ppm", "±5", "N/A"],
+            "units": ["μg/m³", "μg/m³", "Celsius", "Percentage", "ppm", "ppm", "Index", "Category"],
+            "resolution": ["0.1 μg/m³", "0.1 μg/m³", "0.1°C", "0.1%", "0.1 ppm", "0.01 ppm", "1", "N/A"],
+            "nodes": [
+              {
+                "node_id": "n001",
+                "node_name": "Urban AQ Monitor 1",
+                "node_latitude": 17.4449,
+                "node_longitude": 78.3498,
+                "node_area": "Urban Center",
+                "node_protocol": "LoRaWAN",
+                "node_frequency": 868
+              },
+              {
+                "node_id": "n002",
+                "node_name": "Industrial AQ Monitor 1",
+                "node_latitude": 17.4392,
+                "node_longitude": 78.3866,
+                "node_area": "Industrial Zone",
+                "node_protocol": "NB-IoT",
+                "node_frequency": 900
+              }
+            ]
+          },
+          {
+            "sensor_type_id": "st002",
+            "sensor_type_name": "Advanced Gas Analyzer",
+            "parameters": ["NH3 Concentration", "CO Concentration", "NO2 Concentration", "Temperature", "AQI-MP", "Data Interval"],
+            "data_types": ["float", "float", "float", "float", "string", "integer"],
+            "accuracy": ["±0.5 ppm", "±1 ppm", "±0.02 ppm", "±0.5°C", "N/A", "±1s"],
+            "units": ["ppm", "ppm", "ppm", "Celsius", "Parameter", "Seconds"],
+            "resolution": ["0.1 ppm", "0.1 ppm", "0.01 ppm", "0.1°C", "N/A", "1s"],
+            "nodes": [
+              {
+                "node_id": "n003",
+                "node_name": "Residential Gas Analyzer",
+                "node_latitude": 17.4522,
+                "node_longitude": 78.3801,
+                "node_area": "Residential Area",
+                "node_protocol": "Zigbee",
+                "node_frequency": 2400
+              },
+              {
+                "node_id": "n004",
+                "node_name": "Traffic Junction Gas Analyzer",
+                "node_latitude": 17.4350,
+                "node_longitude": 78.3843,
+                "node_area": "Traffic Junction",
+                "node_protocol": "WiFi",
+                "node_frequency": 5000
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "domain_id": "d002",
+        "domain_name": "Weather Monitoring",
+        "domain_short_name": "Weather",
+        "parameters": [],
+        "sensor_types": []
+      },
+      {
+        "domain_id": "d002",
+        "domain_name": "Water Quality",
+        "domain_short_name": "WaterQ",
+        "parameters": [
+          {
+            "parameter_name": "Temperature",
+            "data_type": "float",
+            "accuracy": "±0.3°C",
+            "units": "Celsius",
+            "resolution": "0.1°C",
+            "description": "Measures water temperature"
+          },
+          {
+            "parameter_name": "TDS Voltage",
+            "data_type": "float",
+            "accuracy": "±0.01V",
+            "units": "Volts",
+            "resolution": "0.001V",
+            "description": "Raw voltage from TDS sensor"
+          },
+          {
+            "parameter_name": "Uncompensated TDS value",
+            "data_type": "float",
+            "accuracy": "±5 ppm",
+            "units": "ppm",
+            "resolution": "1 ppm",
+            "description": "TDS value without temperature compensation"
+          },
+          {
+            "parameter_name": "Compensated TDS value",
+            "data_type": "float",
+            "accuracy": "±2 ppm",
+            "units": "ppm",
+            "resolution": "1 ppm",
+            "description": "Temperature-compensated TDS value"
+          },
+          {
+            "parameter_name": "pH",
+            "data_type": "float",
+            "accuracy": "±0.1 pH",
+            "units": "pH units",
+            "resolution": "0.01 pH",
+            "description": "Measures acidity or alkalinity"
+          },
+          {
+            "parameter_name": "Turbidity",
+            "data_type": "float",
+            "accuracy": "±2% NTU",
+            "units": "NTU",
+            "resolution": "0.1 NTU",
+            "description": "Measures water clarity"
+          },
+          {
+            "parameter_name": "Dissolved Oxygen",
+            "data_type": "float",
+            "accuracy": "±0.2 mg/L",
+            "units": "mg/L",
+            "resolution": "0.01 mg/L",
+            "description": "Measures oxygen content in water"
+          },
+          {
+            "parameter_name": "Conductivity",
+            "data_type": "float",
+            "accuracy": "±2% μS/cm",
+            "units": "μS/cm",
+            "resolution": "1 μS/cm",
+            "description": "Electrical conductivity of water"
+          }
+        ],
+        "sensor_types": [
+          {
+            "sensor_type_id": "st003",
+            "sensor_type_name": "Comprehensive Water Quality Probe",
+            "parameters": ["Temperature", "TDS Voltage", "Uncompensated TDS value", "Compensated TDS value", "pH", "Conductivity"],
+            "data_types": ["float", "float", "float", "float", "float", "float"],
+            "accuracy": ["±0.3°C", "±0.01V", "±5 ppm", "±2 ppm", "±0.1 pH", "±2% μS/cm"],
+            "units": ["Celsius", "Volts", "ppm", "ppm", "pH units", "μS/cm"],
+            "resolution": ["0.1°C", "0.001V", "1 ppm", "1 ppm", "0.01 pH", "1 μS/cm"],
+            "nodes": [
+              {
+                "node_id": "n005",
+                "node_name": "Lake Water Monitor",
+                "node_latitude": 17.4150,
+                "node_longitude": 78.4287,
+                "node_area": "Lake Front",
+                "node_protocol": "LoRaWAN",
+                "node_frequency": 868
+              },
+              {
+                "node_id": "n006",
+                "node_name": "River Water Monitor",
+                "node_latitude": 17.4300,
+                "node_longitude": 78.4150,
+                "node_area": "River Bank",
+                "node_protocol": "NB-IoT",
+                "node_frequency": 900
+              }
+            ]
+          },
+          {
+            "sensor_type_id": "st004",
+            "sensor_type_name": "Advanced Water Quality Analyzer",
+            "parameters": ["Turbidity", "Dissolved Oxygen", "Temperature", "pH", "Conductivity"],
+            "data_types": ["float", "float", "float", "float", "float"],
+            "accuracy": ["±2% NTU", "±0.2 mg/L", "±0.3°C", "±0.1 pH", "±2% μS/cm"],
+            "units": ["NTU", "mg/L", "Celsius", "pH units", "μS/cm"],
+            "resolution": ["0.1 NTU", "0.01 mg/L", "0.1°C", "0.01 pH", "1 μS/cm"],
+            "nodes": [
+              {
+                "node_id": "n007",
+                "node_name": "Treatment Plant Water Analyzer",
+                "node_latitude": 17.4195,
+                "node_longitude": 78.4235,
+                "node_area": "Water Treatment Plant",
+                "node_protocol": "Zigbee",
+                "node_frequency": 2400
+              },
+              {
+                "node_id": "n008",
+                "node_name": "Reservoir Water Analyzer",
+                "node_latitude": 17.4280,
+                "node_longitude": 78.4320,
+                "node_area": "Reservoir",
+                "node_protocol": "WiFi",
+                "node_frequency": 5000
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
